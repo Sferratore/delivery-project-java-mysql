@@ -1,0 +1,27 @@
+USE Deliveries;
+
+INSERT INTO Cliente VALUES("AA123","Luigi","Via Prova 23",1,"0123456789","2020-12-08");
+INSERT INTO Cliente VALUES("AB123","Francesco","Via Ischia 60",1,"0123456799","2020-12-08");
+INSERT INTO Cliente VALUES("AC123","Paolo","Via Gianturco 11",0,"0123456999","2020-12-08");
+INSERT INTO SocietaEsterna VALUES("alfonsino","08100750010","Maria Marcuzzi");
+INSERT INTO SocietaEsterna VALUES("Just Eat","08100750011","Sabrina Galeazzi");
+INSERT INTO Rider VALUES("BA123","Pietro","2020-12-08",true);
+INSERT INTO Rider VALUES("BC123","Maria","2020-12-08",true);
+INSERT INTO Rider VALUES("BB123","Giuseppe","2020-12-08",true);
+INSERT INTO Veicolo VALUES("AA123BB","Motorino 50cc","BC123");
+INSERT INTO Dipendente VALUES("CA123","Elena","Belli",2,"Esegue consegne in modo puntuale e preciso. Ha già lavorato presso altri ristoranti e possiede la patente di tipo B.");
+INSERT INTO Dipendente VALUES("CB123","Marco","Senzaquattrini",7,"Ha parecchi anni di esperienza e possiede la patente di guida di tipo B.Puntuale nella consegna.");
+INSERT INTO Ristorante VALUES("L'oro di Napoli","Via Ristoranti 43",true,true,70);
+INSERT INTO Ristorante VALUES("Los pollos hermanos","Via Somma 33",true,true,100);
+INSERT INTO Ordine (Rider, Dipendente, NomeRistorante, IndirizzoRistorante, Cliente, DataOrdine, Costo, Descrizione, Acquisto, StatoConsegna, OrarioConsegnaPresunto, OrarioConsegnaEffettivo) VALUES("BC123",null,"L'oro di Napoli","Via Ristoranti 43","AA123","2020-12-08",120.45,"2 Menù degustazione","Nessuna richiesta di modifica al menu.","Consegnato","21:00:00","21:01:34");
+INSERT INTO Ordine (Rider, Dipendente, NomeRistorante, IndirizzoRistorante, Cliente, DataOrdine, Costo, Descrizione, Acquisto, StatoConsegna, OrarioConsegnaPresunto, OrarioConsegnaEffettivo) VALUES(null,"CA123","Los pollos hermanos","Via Somma 33","AB123","2020-12-08",20.50,"2 Menù base","2 menù base + porzione extra di alette di pollo.","Spedito","21:30:00",null);
+INSERT INTO ServizioDelivery VALUES("Consegna per compleanni","Consegna speciale in occasione di una festa di compleanno effettuata solo su prenotazione","Tutta la settimana","2020-12-08","Los pollos hermanos","Via Somma 33");
+INSERT INTO ServizioDelivery VALUES("Consegna","Consegna direttamente al domicilio del Cliente","Dal lunedì al venerdì","2020-12-08","Los pollos hermanos","Via Somma 33");
+INSERT INTO ServizioDelivery VALUES("Consegna","Consegna direttamente al domicilio del Cliente","Dal lunedì al venerdì","2020-12-08","L'oro di Napoli","Via Ristoranti 43");
+INSERT INTO Prenotazione VALUES("AC123","Los pollos hermanos","Via Somma 33","A1","2020-12-08","12:30:00");
+INSERT INTO Assunzione VALUES("CA123","Los pollos hermanos","Via Somma 33","2020-12-08","Tempo indeterminato.");
+INSERT INTO Assunzione VALUES("CB123","L'oro di Napoli","Via Ristoranti 43","2020-12-08","Scadenza trimestrale.");
+INSERT INTO Valutazione (Rider, Cliente, Voto, DataValutazione, Testo) VALUES("BC123","AA123",5,"2020-12-08","Consegna effettuata con una precisione impeccabile e il cibo è arrivato caldo.");
+INSERT INTO Impiego VALUES("BA123","alfonsino",8,"2020-12-08");
+INSERT INTO Impiego VALUES("BC123","alfonsino",6.5,"2020-12-08");
+INSERT INTO Impiego VALUES("BB123","Just Eat",7.5,"2020-12-08");
