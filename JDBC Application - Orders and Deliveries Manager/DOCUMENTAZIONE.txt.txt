@@ -1,0 +1,8 @@
+Applicazione JDBC creata da Luigi Allocca e Francesco Paolo Sferratore.
+
+-La connection standard è al database in localhost:3066 con Admin:"root" e Password:"Eros1234", ed è modificabile nel file
+"Esercizio.java", funzione "connection()"
+
+-Gli statement in DML sono presenti all'interno del file "Esercizio.java" secondo il nome di "ese1", "ese2", ...
+
+-La classe starter del progetto è la classe Test contenuta nel file "Test.java"
